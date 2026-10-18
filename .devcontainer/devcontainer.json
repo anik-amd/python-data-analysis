@@ -1,0 +1,17 @@
+{
+  "name": "python-data-analysis",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/conda:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "conda env create -f environment.yml -n pydata-book || true; conda activate pydata-book",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/home/codespace/miniconda3/envs/pydata-book/bin/python"
+      }
+    }
+  }
+}
